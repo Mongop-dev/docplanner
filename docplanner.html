@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docplanner Group</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 10px 20px;
+        }
+
+        .logo img {
+            width: 268px;
+            height: 33px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ababab;
+        }
+
+        .nav-links a:hover {
+            color: #00b39b;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .hero-logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .hero h1 {
+            color: #00b39b;
+            font-size: 2.125rem;
+            margin: 1em 0;
+        }
+
+        .hero-text {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .hero-text p {
+            width: 48%;
+            color: #747474;
+        }
+
+        /* Services Section */
+        .services {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 3.75rem auto;
+            padding: 0 20px;
+        }
+
+        .service-card {
+            width: 31%;
+            border-radius: 10px;
+            padding: 2em 1.5em;
+            height: 345px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .for-patients {
+            background: #00ccb1;
+        }
+
+        .for-doctors {
+            background: #3d83df;
+        }
+
+        .for-clinics {
+            background: #1b2734;
+        }
+
+        .service-card h2 {
+            color: white;
+            font-size: 1.625em;
+            margin-bottom: 0.5em;
+        }
+
+        .service-card p {
+            color: white;
+            font-size: 1.125em;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: #e5faf8;
+            padding: 4em 0;
+        }
+
+        .stats-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+        }
+
+        .stats-text {
+            width: 40%;
+        }
+
+        .stats-text h3 {
+            color: #00b39b;
+            font-size: 1.625em;
+            margin-bottom: 0.5em;
+        }
+
+        .stats-text p {
+            color: #747474;
+            margin-bottom: 1em;
+        }
+
+        .stats-grid {
+            width: 60%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 5px;
+            padding: 1.5em;
+            text-align: center;
+        }
+
+        .stat-card img {
+            width: 40px;
+        }
+
+        .stat-card h4 {
+            color: #00b39b;
+            font-size: 1.8125em;
+            margin: 0.5em 0;
+        }
+
+        .stat-card p {
+            color: #747474;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-text, .services, .stats-content {
+                flex-direction: column;
+            }
+
+            .hero-text p, .service-card, .stats-text, .stats-grid {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/api/placeholder/268/33" alt="Docplanner Group">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">About us</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Departments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="/api/placeholder/40/40" alt="Docplanner Group Symbol" class="hero-logo">
+        <h1>Making the healthcare experience more human</h1>
+        <div class="hero-text">
+            <p>We want patients to find the perfect doctor and book an appointment in the most easy way. The patient journey should be enjoyable, and that's why we are always next to them: to help them find the best possible care. Anytime, anywhere.</p>
+            <p>We also help doctors to better manage their practice and build their online reputation. With our integrated end-to-end solution, doctors are able not only to improve their online presence, but also to devote their time to what really matters: their patients.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="service-card for-patients">
+            <h2>For patients</h2>
+            <p>Find a doctor, book a visit and solve any health-related doubt</p>
+        </div>
+        <div class="service-card for-doctors">
+            <h2>For doctors</h2>
+            <p>Save time managing visits and cut no-shows by half</p>
+        </div>
+        <div class="service-card for-clinics">
+            <h2>For clinics</h2>
+            <p>Deliver an exceptional patient experience in your clinic</p>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stats-content">
+            <div class="stats-text">
+                <h3>The world's biggest healthcare platform</h3>
+                <p>We work from 9 offices all over the world, bringing Docplanner Group to life in 13 countries.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <img src="/api/placeholder/40/40" alt="Flag icon">
+                    <h4>Leader in 13 countries</h4>
+                    <p>Poland, Brazil, Mexico, Spain, Italy, Germany, Turkey, Colombia, Czech Republic, Portugal, Argentina, Peru and Chile</p>
+                </div>
+                <div class="stat-card">
+                    <img src="/api/placeholder/40/40" alt="Visits icon">
+                    <h4>15,000,000 appointments</h4>
+                    <p>booked last month</p>
+                </div>
+                <div class="stat-card">
+                    <img src="/api/placeholder/40/40" alt="Patients icon">
+                    <h4>90,000,000 patients</h4>
+                    <p>visit our websites each month</p>
+                </div>
+                <div class="stat-card">
+                    <img src="/api/placeholder/40/40" alt="Doctors icon">
+                    <h4>210,000 active doctors</h4>
+                    <p>trust our solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
